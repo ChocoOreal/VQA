@@ -46,4 +46,18 @@ Cuối cùng ta áp vào max-pool và nhân từng phân tử để tìm ra câu
 
 Object, color, count
 #### [Learning to Reason: Endto-End Module Networks](./1704.05526.pdf)
-Kết hợp cơ chế attenction và compositional model 
+Kết hợp cơ chế attenction và compositional model. Phân tách câu hỏi thành các neural modules riêng biệt. 
+
+#### [R-VQA](./1805.09701.pdf)
+Mỗi data trong tập R-VQA bao gồm ảnh, câu hỏi, relation fact (được tạo ra từ relation detector từ ảnh và câu hỏi)và câu trả lời. Mô hình gồm 3 thành phần: 
+* Context aware visual attention
+* Fact aware semantic attention (KQ trả ra của tp 1 sẽ được feed cho tp2 để chọn ra những relation facts liên quan)
+* Joint knowledge embedding learning: kết hợp visual và semantic attention để học kiến thức hình ảnh và ngữ nghĩa. 
+
+Trả lời trong nhiều từ. 
+
+Dạng câu hỏi: Object, color, activity, position, scene, relation, commonsense
+
+### Các vấn đề còn tồn tại
+[SAN](./Yang_Stacked_Attention_Networks_CVPR_2016_paper.pdf) và [ABC-CNN](./1511.05960.pdf) chỉ trả lời được trong 1 từ, trong nhiều trường hợp gây khó khăn cho con người.
+
